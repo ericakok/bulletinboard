@@ -9,7 +9,7 @@ function userLogIn() {
   },
   error: function(user, error) {
     // The login failed. Check error to see why.
-    if (error.code = 101) {
+    if (error.code === 101) {
       alert("Authentication failed. Please check your username and password and try again.");
     }
 
