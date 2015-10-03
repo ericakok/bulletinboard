@@ -2,20 +2,29 @@
 <html>
   <head>
     <title> HatterBulletin </title>
+    <script src="https://www.parsecdn.com/js/parse-1.6.4.min.js"></script>
   </head>
   <body>
+    <script type = "text/javascript" >
+    setupParse();
+    function setupParse() {
+    Parse.initialize("MGG1O5pajQgDqEePY3vJVYeTFgMzlDeQldgNboSz", "CLsQXkPpbgWWbNXuvsmhr6oHBLA5hsoRFKloseXm");
+    }
+    </script>
     <center><h1> HatterBulletin </h1></center>
     <center><h2> All your events, in one central place. </h2></center>
     <br>
     <center>
     <p><b>Create an Event</b></p><br>
-    <form method="get">
-      <p>Upload Poster:</p><input name="poster"/><br><input type="Submit" onclick="uploadPoster"/><br>
+    <form id="postform" method="get">
+      <p>Upload Poster:</p><input name="poster"/><br><input type="Submit"/><br>
       <p>Event Name:</p><input name="eventName"/><br>
       <p>Date:</p><input name="date"/><br>
-      <p>Location:</p><input name="location"/><br>
-    <p><input type="Submit" onclick="createEvent()"/></p>
+      <p>Location:</p><input id="location" name="location"/><br>
+    <p><input type="Submit"/></p>
     </form>
     </center>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js" type="text/javascript"></script>
+    <script src="posts.js" type="text/javascript"></script>
   </body>
   </html>
