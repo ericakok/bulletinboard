@@ -8,6 +8,7 @@ function userLogIn() {
     },
     error: function(user, error) {
       // The login failed. Check error to see why.
+      //Not my fault if broken
       if (error.code === 101) {
         alert("Authentication failed. Please check your username and password and try again.");
       }
