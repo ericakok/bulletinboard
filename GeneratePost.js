@@ -3,11 +3,9 @@ var query = new Parse.Query(Post);
 query.select("EventName", "Date", "Location");
 query.find({
   success: function(results) {
-    alert("Successfully retrieved " + results.length + "events");
     // Do something with the returned Parse.Object values
     for (var i = 0; i < results.length; i++) {
       var object = results[i];
-      alert(object.id + ' - ' + object.get('EventName') + " - " + object.get('Date') + " - " + object.get('Location'));// delete this later
 	  var eventName = object.get('EventName');
 	  var date = object.get('Date');
 	  var location= object.get('Location');
